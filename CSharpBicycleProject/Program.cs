@@ -1,7 +1,18 @@
 ﻿using CSharpBicycleProject;
 
 // TestingModel();
-TestSerialGenerator();
+// TestSerialGenerator();
+TestBikeOptions();
+
+// Testing Bike Options
+void TestBikeOptions()
+{
+    Touring touring = new Touring(new NormalWheel());
+    LeatherGrips grips = new LeatherGrips();
+    decimal total = touring.Price + grips.OptionAmount;
+    Console.WriteLine($"Bike price is {touring.Price} and leather grips are {grips.OptionAmount}");
+    Console.WriteLine($"Total price is {total}");
+}
 
 
 // Testing Serial Number Generator
